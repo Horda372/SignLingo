@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from catalog.views import lessons_api, get_lesson_by_id, user_login
+from catalog.views import lessons_api, get_lesson_by_id, user_login, user_register, check_premium_status, levels_api, \
+    get_level_by_id
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +25,11 @@ urlpatterns = [
     path('api/lessons/', lessons_api),
     path('api/lessons/<int:lesson_id>/', get_lesson_by_id),
     path('api/login/', user_login),
+    path('api/register/', user_register),
+    path('api/check-premium/', check_premium_status),
+    path('api/levels/', levels_api),
+    path('api/levels/<int:level_id>/', get_level_by_id),
+    path('api/lessons/<int:lesson_id>/', get_lesson_by_id),
+
 
 ]
