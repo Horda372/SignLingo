@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+scikit-learn
+joblib
+mediapipe
+opencv-python
+python-multipart
