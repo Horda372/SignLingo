@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -7,241 +7,175 @@ import {
   Pressable,
   StyleSheet,
   Dimensions,
+  Image,
 } from 'react-native';
+import DeafCultureLesson from '../lessons/fundamentalsOfAsl'
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import DeafCultureLesson from '../lessons/fundamentalsOfAsl';
-import HistoryOfAsl from '../lessons/HistoryOfAsl';
-
+import { useFocusEffect, useRouter } from 'expo-router';
+import { useCustomTheme } from '../../utils/utils';
+import { lightModeColors, darkModeColors } from '../../constants/themeColors';
+import {lessons,quesitons} from '../Lessons'
 const { width } = Dimensions.get('window');
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const signLanguageChapters = [
+const lessonCategories = [
   {
-    title: 'Fundamentals of ASL',
+    title: 'Practice Tips',
     lessons: [
-      'Deaf Culture Basics',
-      'History of ASL',
-      'The Role of Facial Expression',
-      'Handshape Types',
-      'Palm Orientation',
-      'Movement & Location',
-      'Non-manual Markers',
-      'Fingerspelling Overview',
-      'Numbers Overview',
-      'Practice Exercises',
+      'ABCs in ASL: Learn how to Fingerspell!',
+      'American Sign Language (ASL)',
+      'Common Mistakes to Avoid',
+      'Speed Building Exercises',
+      'Finger Independence Drills',
+      'Mirror Practice Benefits',
+      'Video Recording Yourself',
+      'Practice Schedule Ideas',
+      'Motivation Strategies',
+      'Progress Tracking Methods',
     ],
   },
   {
-    title: 'Fingerspelling Deep Dive',
+    title: 'Q&A',
     lessons: [
-      'Letters A–C',
-      'Letters D–F',
-      'Letters G–I',
-      'Letters J–L',
-      'Letters M–O',
-      'Letters P–R',
-      'Letters S–T',
-      'Letters U–V',
-      'Letters W–Z',
-      'Spelling Common Words',
+      'How long to master fingerspelling?',
+      'Best apps for practice?',
+      'Grammar structure questions',
+      'Regional sign variations',
+      'Facial expression importance',
+      'Learning as a hearing person',
+      'Teaching children ASL',
+      'Professional interpreter path',
+      'Online vs in-person classes',
+      'Cultural etiquette questions',
     ],
   },
   {
-    title: 'Numbers & Time',
+    title: 'Events',
     lessons: [
-      'Numbers 1–5',
-      'Numbers 6–10',
-      'Numbers 11–20',
-      'Numbers 21–50',
-      'Numbers 51–100',
-      'Ordinal Numbers',
-      'Telling Time (Hours)',
-      'Days of the Week',
-      'Months of the Year',
-      'Scheduling Phrases',
+      'Weekly Practice Meetup',
+      'ASL Coffee Chat',
+      'Silent Dinner Event',
+      'Storytelling Night',
+      'Deaf Community Workshop',
+      'Interpreter Training Session',
+      'Cultural Awareness Seminar',
+      'Student Showcase',
+      'Holiday Sign Celebration',
+      'Monthly Progress Challenge',
     ],
   },
   {
-    title: 'Core Vocabulary & Phrases',
+    title: 'Stories',
     lessons: [
-      'Greetings',
-      'Farewells',
-      'Introductions',
-      'Please / Thank You',
-      'Yes / No / Maybe',
-      'Excuse Me / Sorry',
-      'WH-Questions: Who/What/Where',
-      'WH-Questions: When/Why/How',
-      'Simple Sentences',
-      'Practice Dialogues',
+      'My First Conversation',
+      'Learning Journey Update',
+      'Breakthrough Moment',
+      'Cultural Exchange Experience',
+      'Overcoming Challenges',
+      'Meeting Deaf Friends',
+      'Family Learning Together',
+      'Workplace Communication',
+      'Travel Experience',
+      'Inspiring Teacher Story',
     ],
   },
   {
-    title: 'Family & Relationships',
+    title: 'Resources',
     lessons: [
-      'Family (General)',
-      'Parents & Siblings',
-      'Grandparents',
-      'Aunts, Uncles & Cousins',
-      'Spouse & Partner',
-      'Friends & Acquaintances',
-      'Describing People',
-      'Possession',
-      'Relationship Verbs',
-      'Role-play Conversations',
+      'Free Online Dictionaries',
+      'YouTube Channel Recommendations',
+      'Book Suggestions',
+      'Mobile App Reviews',
+      'Local Class Listings',
+      'Interpreter Services',
+      'Cultural Organizations',
+      'Research Papers',
+      'Documentary Recommendations',
+      'Helpful Websites',
     ],
   },
   {
-    title: 'Food & Dining',
+    title: 'General',
     lessons: [
-      'Food Basic Signs',
-      'Drink Basic Signs',
-      'Fruits',
-      'Vegetables',
-      'Meals & Meal Times',
-      'Ordering at a Restaurant',
-      'Cooking Actions',
-      'Taste Descriptors',
-      'Dietary Preferences',
-      'Restaurant Role-play',
-    ],
-  },
-  {
-    title: 'Daily Life & Activities',
-    lessons: [
-      'Wake Up & Morning Routine',
-      'Getting Dressed',
-      'Going to Work/School',
-      'Studying & Reading',
-      'Working & Tasks',
-      'Exercise & Sports',
-      'Household Chores',
-      'Leisure Activities',
-      'Relaxation & Hobbies',
-      'Evening / Bedtime',
-    ],
-  },
-  {
-    title: 'Emotions & Descriptions',
-    lessons: [
-      'Happy & Joyful',
-      'Sad & Depressed',
-      'Angry & Frustrated',
-      'Excited & Surprised',
-      'Bored & Tired',
-      'Scared & Nervous',
-      'Describing Size (Big/Small)',
-      'Describing Shape',
-      'Describing Texture',
-      'Comparative Descriptions',
-    ],
-  },
-  {
-    title: 'Directions & Travel',
-    lessons: [
-      'Left/Right/Forward/Back',
-      'Up/Down/Near/Far',
-      'Go/Come/Stop/Wait',
-      'Asking "Where Is…?"',
-      'Transportation Modes',
-      'Maps & Locations',
-      '"How Do I Get To…?"',
-      'Booking Travel',
-      'Airport/Station Signs',
-      'Travel Role-play',
-    ],
-  },
-  {
-    title: 'Grammar & Conversation',
-    lessons: [
-      'Topic-Comment Structure',
-      'Yes–No Questions',
-      'Wh-Questions Grammar',
-      'Negation',
-      'Classifiers',
-      'Role Shift & Characters',
-      'Spatial Agreement',
-      'Non-manual Grammar Markers',
-      'Storytelling Techniques',
-      'Putting It All Together',
+      'Welcome New Members!',
+      'Community Guidelines',
+      'Success Stories',
+      'Weekly Challenges',
+      'Sign of the Day',
+      'Cultural Awareness',
+      'News and Updates',
+      'Member Introductions',
+      'Feedback and Suggestions',
+      'Random Discussions',
     ],
   },
 ];
 
-const lessonComponents = [
-  // Chapter 1 - Fundamentals of ASL
-  DeafCultureLesson,
-  HistoryOfAsl,
-  // Add the remaining lesson components...
-];
-
-export default function Browse() {
+export default function Lessons() {
   const navigation = useNavigation();
-  const colorScheme = useColorScheme();
-  
-  // Changed from single number to object tracking each lesson
-  const [lessonProgress, setLessonProgress] = useState({});
+  const router = useRouter();
+  const { isDark } = useCustomTheme();
+  const theme = isDark ? darkModeColors : lightModeColors;
+  const [activeTab, setActiveTab] = useState('feed');
+  const [userEngagement, setUserEngagement] = useState({});
   const [activeLessonIndex, setActiveLessonIndex] = useState(null);
-
-  // Calculate which chapter and lesson within that chapter
-  const getCurrentChapterAndLesson = (globalLessonIndex) => {
-    const chapterIndex = Math.floor(globalLessonIndex / 10);
+  // Calculate which category and lesson within that category
+  const getCurrentCategoryAndLesson = (globalLessonIndex) => {
+    const categoryIndex = Math.floor(globalLessonIndex / 10);
     const lessonIndex = globalLessonIndex % 10;
-    return { chapterIndex, lessonIndex };
+    return { categoryIndex, lessonIndex };
   };
 
-  // Helper function to get total completed lessons count
-  const getTotalCompletedLessons = () => {
-    return Object.values(lessonProgress).filter(completed => completed).length;
+  // Helper function to get total engaged lessons count
+  const getTotalEngagedLessons = () => {
+    return Object.values(userEngagement).filter(engaged => engaged).length;
+  };
+  useFocusEffect(
+  React.useCallback(() => {
+    (async () => {
+      const json = await AsyncStorage.getItem('userEngagement');
+      if (json) setUserEngagement(JSON.parse(json));
+    })();
+  }, [])
+);
+useEffect(() => {
+  (async () => {
+    const json = await AsyncStorage.getItem('userEngagement');
+    if (json) setUserEngagement(JSON.parse(json));
+  })();
+}, []);
+  // Helper function to check if a lesson is engaged with
+  const isLessonEngaged = (globalIndex) => {
+    return userEngagement[globalIndex] === true;
   };
 
-  // Helper function to check if a lesson is completed
-  const isLessonCompleted = (globalIndex) => {
-    return lessonProgress[globalIndex] === true;
-  };
-
-  // Helper function to get the current lesson (next uncompleted lesson)
+  // Helper function to get the current lesson (next unengaged lesson)
   const getCurrentLessonIndex = () => {
-    const totalLessons = signLanguageChapters.length * 10;
+    const totalLessons = lessonCategories.length * 10;
     for (let i = 0; i < totalLessons; i++) {
-      if (!isLessonCompleted(i)) {
+      if (!isLessonEngaged(i)) {
         return i;
       }
     }
-    return totalLessons; // All lessons completed
+    return totalLessons; // All lessons engaged
   };
 
   useEffect(() => {
-    (async () => {
-      try {
-        const storedProgress = await AsyncStorage.getItem('lessonProgress');
-        if (storedProgress !== null) {
-          setLessonProgress(JSON.parse(storedProgress));
-        }
-      } catch (err) {
-        console.log('Unable to load progress', err);
-      }
-    })();
-  }, []);
-
-  // Update navigation header when lesson state changes
-  useEffect(() => {
-    const isInLesson = activeLessonIndex !== null;
-    const brown = '#92400E';
+    const brown = theme.numberBadge;
 
     navigation.setOptions({
       headerTintColor: brown,
+      headerStyle: {
+        backgroundColor: theme.background,
+      },
       headerLeft: () => null,
 
-      headerTitle: isInLesson
+      headerTitle: activeLessonIndex !== null
         ? () => {
-            const { chapterIndex, lessonIndex } = getCurrentChapterAndLesson(activeLessonIndex);
-            const lessonTitle = signLanguageChapters[chapterIndex].lessons[lessonIndex];
+            const { categoryIndex, lessonIndex } = getCurrentCategoryAndLesson(activeLessonIndex);
+            const lessonTitle = lessonCategories[categoryIndex].lessons[lessonIndex];
             
             return (
               <Pressable
@@ -252,8 +186,8 @@ export default function Browse() {
                   paddingVertical: 8,
                 }}
               >
-                <FontAwesome
-                  name="arrow-left"
+                <Ionicons
+                  name="arrow-back"
                   size={20}
                   color={brown}
                   style={{ marginRight: 8 }}
@@ -278,75 +212,84 @@ export default function Browse() {
                 fontWeight: '600',
               }}
             >
-              All ASL Lessons
+              Lessons
             </Text>
           ),
 
       headerTitleStyle: { color: brown },
       headerTitleAlign: 'left',
     });
-  }, [activeLessonIndex, navigation]);
+  }, [activeLessonIndex, navigation, theme]);
 
-  const persistProgress = async (newProgress) => {
-    try {
-      await AsyncStorage.setItem('lessonProgress', JSON.stringify(newProgress));
-    } catch (err) {
-      console.log('Unable to save progress', err);
-    }
-  };
-
-  const markLessonCompleted = () => {
-    if (activeLessonIndex === null) return;
-    
-    const newProgress = {
-      ...lessonProgress,
-      [activeLessonIndex]: true
-    };
-    
-    setLessonProgress(newProgress);
-    setActiveLessonIndex(null);
-    persistProgress(newProgress);
-  };
+ const markLessonEngaged = () => {
+  if (activeLessonIndex === null) return;
+  const newEngagement = { ...userEngagement, [activeLessonIndex]: true };
+  setUserEngagement(newEngagement);
+  AsyncStorage.setItem('userEngagement', JSON.stringify(newEngagement));
+  setActiveLessonIndex(null);
+};
 
   const goBackToLessons = () => {
     setActiveLessonIndex(null);
   };
 
   const getLessonStatus = (globalIndex) => {
-    if (isLessonCompleted(globalIndex)) return 'completed';
+    if (isLessonEngaged(globalIndex)) return 'completed';
     if (globalIndex === getCurrentLessonIndex()) return 'current';
-    if (globalIndex < getCurrentLessonIndex()) return 'current'; // Allow replay of previous lessons
+    if (globalIndex < getCurrentLessonIndex()) return 'current'; // Allow revisiting previous lessons
     return 'locked';
   };
 
-  const handleLessonPress = (chapterIndex, lessonIndex) => {
-    const globalIndex = chapterIndex * 10 + lessonIndex;
-    const status = getLessonStatus(globalIndex);
-    if (status === 'locked') return;
-    setActiveLessonIndex(globalIndex);
-  };
+const handleLessonPress = (categoryIndex, lessonIndex) => {
+    const globalIndex = categoryIndex * 10 + lessonIndex;
+    if (getLessonStatus(globalIndex) === 'locked') return;
+    
+    router.push({
+        pathname: `/lessons/${globalIndex}`,
+        params: { 
+            onComplete: JSON.stringify({ globalIndex }) // Pass completion data
+        }
+    });
+}
 
-  // Reset function for development
-  const resetProgress = async () => {
-    try {
-      await AsyncStorage.removeItem('lessonProgress');
-      setLessonProgress({});
-      setActiveLessonIndex(null);
-      console.log('Progress reset successfully');
-    } catch (err) {
-      console.log('Unable to reset progress', err);
-    }
-  };
+const markLessonComplete = (globalIndex) => {
+    setUserEngagement(prev => ({
+        ...prev,
+        [globalIndex]: true
+    }));
+};
 
-  // When a lesson is active, render that lesson component
-  if (activeLessonIndex !== null && lessonComponents[activeLessonIndex]) {
-    const ActiveLessonComponent = lessonComponents[activeLessonIndex];
+  // When a lesson is active, render that lesson content
+  if (activeLessonIndex !== null) {
+    const { categoryIndex, lessonIndex } = getCurrentCategoryAndLesson(activeLessonIndex);
+    const category = lessonCategories[categoryIndex];
+    const lesson = category.lessons[lessonIndex];
+    
     return (
-      <SafeAreaView style={styles.container}>
-        <ActiveLessonComponent 
-          onComplete={markLessonCompleted} 
-          onBack={goBackToLessons}
-        />
+      <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
+        <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
+          <LinearGradient
+            colors={theme.categories[category.title]}
+            style={styles.lessonHeader}
+          >
+            <Text style={[styles.lessonTitle, { color: theme.textSecondary }]}>{}</Text>
+            <Text style={[styles.lessonSubtitle, { color: theme.textLight }]}>
+              {category.title} • Lesson {lessonIndex + 1} of {category.lessons.length}
+            </Text>
+          </LinearGradient>
+          
+          <View style={styles.lessonContent}>
+            <Text style={[styles.lessonText, { color: theme.text }]}>
+ </Text>
+            
+            <Pressable
+              onPress={markLessonEngaged}
+              style={[styles.engageButton, { backgroundColor: theme.buttonBg }]}
+            >
+              <Text style={[styles.engageButtonText, { color: theme.text }]}>Mark as Read</Text>
+            </Pressable>
+          </View>
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -356,7 +299,7 @@ export default function Browse() {
       case 'completed':
         return 'checkmark';
       case 'current':
-        return 'play';
+        return 'chatbubble';
       default:
         return 'lock-closed';
     }
@@ -365,34 +308,34 @@ export default function Browse() {
   const getCircleColors = (status) => {
     switch (status) {
       case 'completed':
-        return ['#D97706', '#92400E'];
+        return theme.lessonCircle.completed;
       case 'current':
-        return ['#EA580C', '#C2410C'];
+        return theme.lessonCircle.current;
       default:
-        return ['#9CA3AF', '#6B7280'];
+        return theme.lessonCircle.locked;
     }
   };
 
   const getLabelColors = (status) => {
     switch (status) {
       case 'completed':
-        return ['#FEF3C7', '#FDE68A'];
+        return theme.lessonLabel.completed;
       case 'current':
-        return ['#FED7AA', '#FDBA74'];
+        return theme.lessonLabel.current;
       default:
-        return ['#F3F4F6', '#E5E7EB'];
+        return theme.lessonLabel.locked;
     }
   };
 
-  const renderLesson = (lesson, lessonIndex, chapterIndex, isLastLesson) => {
-    const globalIndex = chapterIndex * 10 + lessonIndex;
+  const renderLesson = (lesson, lessonIndex, categoryIndex, isLastLesson) => {
+    const globalIndex = categoryIndex * 10 + lessonIndex;
     const status = getLessonStatus(globalIndex);
     const isLeft = lessonIndex % 2 === 0;
 
     return (
       <View key={lessonIndex} style={styles.lessonContainer}>
         {!isLastLesson && (
-          <View style={[styles.connectingLine, { left: width / 2 - 1 }]} />
+          <View style={[styles.connectingLine, { left: width / 2 - 1, backgroundColor: theme.connectingLine }]} />
         )}
 
         <View style={[styles.lessonRow, isLeft ? styles.leftAlign : styles.rightAlign]}>
@@ -404,18 +347,18 @@ export default function Browse() {
               <Pressable
                 style={styles.circleButton}
                 disabled={status === 'locked'}
-                onPress={() => handleLessonPress(chapterIndex, lessonIndex)}
+                onPress={() => handleLessonPress(categoryIndex, lessonIndex)}
               >
                 <Ionicons
                   name={getIcon(status)}
                   size={status === 'locked' ? 16 : 20}
-                  color="#FFFFFF"
+                  color={theme.textLight}
                 />
               </Pressable>
             </LinearGradient>
 
-            <View style={styles.numberBadge}>
-              <Text style={styles.numberText}>{lessonIndex + 1}</Text>
+            <View style={[styles.numberBadge, { backgroundColor: theme.numberBadge }]}>
+              <Text style={[styles.numberText, { color: theme.textLight }]}>{lessonIndex + 1}</Text>
             </View>
           </View>
 
@@ -424,33 +367,33 @@ export default function Browse() {
               colors={getLabelColors(status)}
               style={[
                 styles.lessonLabel,
-                status === 'completed' && styles.completedBorder,
-                status === 'current' && styles.currentBorder,
-                status === 'locked' && styles.lockedBorder,
+                status === 'completed' && [styles.completedBorder,],
+                status === 'current' && [styles.currentBorder, ],
+                status === 'locked' && [styles.lockedBorder, ],
               ]}
             >
               <Text style={[
                 styles.lessonText,
-                status === 'completed' && styles.completedText,
-                status === 'current' && styles.currentText,
-                status === 'locked' && styles.lockedText,
+                status === 'completed' && [styles.completedText, { color: theme.textSecondary }],
+                status === 'current' && [styles.currentText, { color: theme.textSecondary }],
+                status === 'locked' && [styles.lockedText, { color: theme.textSecondary }],
               ]}>
                 {lesson}
               </Text>
 
               {status === 'completed' && (
                 <View style={styles.statusRow}>
-                  <Ionicons name="star" size={12} color="#F59E0B" />
-                  <Text style={styles.completedStatus}>Completed</Text>
+                  <Ionicons name="heart" size={12} color={theme.statsIcons.star} />
+                  <Text style={[styles.completedStatus, { color: theme.textSecondary }]}>Finished</Text>
                 </View>
               )}
 
               {status === 'current' && (
                 <View style={styles.progressContainer}>
-                  <View style={styles.progressBar}>
-                    <View style={styles.progressFill} />
+                  <View style={[styles.progressBar, { backgroundColor: theme.dailyProgress.track }]}>
+                    <View style={[styles.progressFill, { backgroundColor: theme.dailyProgress.fill }]} />
                   </View>
-                  <Text style={styles.progressText}>Ready to Start</Text>
+                  <Text style={[styles.progressText, { color: theme.textSecondary }]}>Ready to Read</Text>
                 </View>
               )}
             </LinearGradient>
@@ -460,58 +403,58 @@ export default function Browse() {
     );
   };
 
-  const renderChapter = (chapter, chapterIndex) => {
-    const { title, lessons } = chapter;
+  const renderCategory = (category, categoryIndex) => {
+    const { title, lessons } = category;
     
-    // Calculate chapter progress using the new system
-    const chapterStartIndex = chapterIndex * 10;
-    const lessonsCompletedInChapter = lessons.filter((_, lessonIndex) => 
-      isLessonCompleted(chapterStartIndex + lessonIndex)
+    // Calculate category engagement using the new system
+    const categoryStartIndex = categoryIndex * 10;
+    const lessonsEngagedInCategory = lessons.filter((_, lessonIndex) => 
+      isLessonEngaged(categoryStartIndex + lessonIndex)
     ).length;
     
     return (
-      <View key={chapterIndex} style={styles.chapterContainer}>
-        {/* Chapter Header */}
-        <LinearGradient colors={['#92400E', '#EA580C']} style={styles.chapterHeader}>
-          <Text style={styles.chapterTitle}>{title}</Text>
-          <Text style={styles.chapterSubtitle}>
-            Chapter {chapterIndex + 1} of {signLanguageChapters.length}
+      <View key={categoryIndex} style={styles.chapterContainer}>
+        {/* Category Header */}
+        <LinearGradient colors={theme.categories[title]} style={styles.chapterHeader}>
+          <Text style={[styles.chapterTitle, { color: theme.textLight }]}>{title}</Text>
+          <Text style={[styles.chapterSubtitle, { color: theme.textLight }]}>
+            Category {categoryIndex + 1} of {lessonCategories.length}
           </Text>
           <View style={styles.statsRow}>
             <View style={styles.statItem}>
-              <Ionicons name="star" size={16} color="#FDE047" />
-              <Text style={styles.statText}>{lessonsCompletedInChapter * 50} XP</Text>
+              <Ionicons name="heart" size={16} color={theme.statsIcons.star} />
+              <Text style={[styles.statText, { color: theme.textLight }]}>{lessonsEngagedInCategory * 25} Points</Text>
             </View>
             <View style={styles.statItem}>
-              <Ionicons name="diamond" size={16} color="#60A5FA" />
-              <Text style={styles.statText}>3</Text>
+              <Ionicons name="chatbubbles" size={16} color={theme.statsIcons.diamond} />
+              <Text style={[styles.statText, { color: theme.textLight }]}>5</Text>
             </View>
             <View style={styles.statItem}>
-              <Ionicons name="trophy" size={16} color="#F59E0B" />
-              <Text style={styles.statText}>{lessonsCompletedInChapter}/10</Text>
+              <Ionicons name="people" size={16} color={theme.statsIcons.trophy} />
+              <Text style={[styles.statText, { color: theme.textLight }]}>{lessonsEngagedInCategory}/10</Text>
             </View>
           </View>
         </LinearGradient>
 
-        {/* Chapter Lessons */}
+        {/* Category Lessons */}
         <View style={styles.pathContainer}>
           {lessons.map((lesson, lessonIndex) => 
-            renderLesson(lesson, lessonIndex, chapterIndex, lessonIndex === lessons.length - 1)
+            renderLesson(lesson, lessonIndex, categoryIndex, lessonIndex === lessons.length - 1)
           )}
         </View>
 
-        {/* Chapter Completion Card */}
-        {lessonsCompletedInChapter === 10 && (
+        {/* Category Completion Card */}
+        {lessonsEngagedInCategory === 10 && (
           <LinearGradient
-            colors={['#FEF3C7', '#FDE68A']}
+            colors={theme.cardGradient}
             style={styles.completionCard}
           >
-            <Text style={styles.completionTitle}>Chapter Complete! 🎊</Text>
-            <Text style={styles.completionText}>
-              Great job completing {title}! 
-              {chapterIndex < signLanguageChapters.length - 1 
-                ? ` Get ready for the next chapter: ${signLanguageChapters[chapterIndex + 1]?.title}.`
-                : ' You\'ve completed all ASL lessons!'}
+            <Text style={[styles.completionTitle, { color: theme.text }]}>Category Complete! 🎊</Text>
+            <Text style={[styles.completionText, { color: theme.textSecondary }]}>
+              Great job engaging with {title}! 
+              {categoryIndex < lessonCategories.length - 1 
+                ? ` Get ready for the next category: ${lessonCategories[categoryIndex + 1]?.title}.`
+                : ' You\'ve engaged with all lesson categories!'}
             </Text>
           </LinearGradient>
         )}
@@ -519,50 +462,45 @@ export default function Browse() {
     );
   };
 
-  const totalCompletedLessons = getTotalCompletedLessons();
-  const totalLessons = signLanguageChapters.length * 10;
+  const totalEngagedLessons = getTotalEngagedLessons();
+  const totalLessons = lessonCategories.length * 10;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, { backgroundColor: theme.background }]}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {signLanguageChapters.map((chapter, chapterIndex) => 
-          renderChapter(chapter, chapterIndex)
+        {lessonCategories.map((category, categoryIndex) => 
+          renderCategory(category, categoryIndex)
         )}
 
         {/* Final Encouragement Card */}
         <LinearGradient
-          colors={['#FEF3C7', '#FDE68A']}
+          colors={theme.cardGradient}
           style={styles.encouragementCard}
         >
-          <Text style={styles.encouragementTitle}>
-            {totalCompletedLessons >= totalLessons
-              ? 'Congratulations! 🎉'
-              : 'Keep Going!'}
+          <Text style={[styles.encouragementTitle, { color: theme.text }]}>
+            {totalEngagedLessons >= totalLessons
+              ? 'Lesson Champion! 🎉'
+              : 'Keep Learning!'}
           </Text>
-          <Text style={styles.encouragementText}>
-            {totalCompletedLessons >= totalLessons
-              ? 'You\'ve completed all ASL lessons! You\'re now ready to have conversations in American Sign Language.'
-              : 'You\'re making great progress. Complete your daily goal to earn more XP!'}
+          <Text style={[styles.encouragementText, { color: theme.textSecondary }]}>
+            {totalEngagedLessons >= totalLessons
+              ? 'You\'ve completed all lessons! You\'re now a master of ASL learning.'
+              : 'You\'re making great progress. Keep engaging with the lessons to earn more points!'}
           </Text>
-          
-          {/* Reset button for development */}
-          <Pressable
-            onPress={resetProgress}
-            style={styles.resetButton}
-          >
-            <Text style={styles.resetButtonText}>Reset Progress (Dev)</Text>
-          </Pressable>
           
           <View style={styles.dailyProgressContainer}>
-            <View style={styles.dailyProgressBar}>
-              <View style={[styles.dailyProgressFill, { width: `${(Math.min(totalCompletedLessons, 5) / 5) * 100}%` }]} />
+            <View style={[styles.dailyProgressBar, { backgroundColor: theme.dailyProgress.track }]}>
+              <View style={[styles.dailyProgressFill, { 
+                width: `${(Math.min(totalEngagedLessons, 5) / 5) * 100}%`,
+                backgroundColor: theme.dailyProgress.fill 
+              }]} />
             </View>
-            <Text style={styles.dailyProgressText}>
-              {Math.min(totalCompletedLessons, 5)}/5 lessons completed today
+            <Text style={[styles.dailyProgressText, { color: theme.text }]}>
+              {Math.min(totalEngagedLessons, 5)}/5 lessons completed today
             </Text>
           </View>
         </LinearGradient>
@@ -575,7 +513,6 @@ const styles = StyleSheet.create({
   // Container Styles
   container: {
     flex: 1,
-    backgroundColor: '#FFFBEB',
   },
   scrollView: {
     flex: 1,
@@ -599,12 +536,10 @@ const styles = StyleSheet.create({
   chapterTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#FFFFFF',
     marginBottom: 2,
   },
   chapterSubtitle: {
     fontSize: 14,
-    color: '#FED7AA',
     marginBottom: 8,
   },
   statsRow: {
@@ -618,7 +553,6 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   statText: {
-    color: '#FFFFFF',
     fontSize: 14,
     fontWeight: '600',
   },
@@ -637,7 +571,6 @@ const styles = StyleSheet.create({
     top: 80,
     width: 2,
     height: 32,
-    backgroundColor: '#D97706',
     zIndex: 0,
   },
   lessonRow: {
@@ -659,8 +592,9 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   rightCircleContainer: {
+
     position: 'relative',
-    marginLeft: 16,
+    marginRight: 16,
   },
   lessonCircle: {
     width: 80,
@@ -668,6 +602,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
+  
     elevation: 4,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -676,6 +611,7 @@ const styles = StyleSheet.create({
   },
   currentGlow: {
     elevation: 8,
+    
     shadowOpacity: 0.4,
   },
   circleButton: {
@@ -691,12 +627,10 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#92400E',
     justifyContent: 'center',
     alignItems: 'center',
   },
   numberText: {
-    color: '#FFFFFF',
     fontSize: 12,
     fontWeight: 'bold',
   },
@@ -716,28 +650,18 @@ const styles = StyleSheet.create({
     shadowRadius: 2.22,
   },
   completedBorder: {
-    borderLeftColor: '#D97706',
+    borderLeftWidth: 0,
   },
   currentBorder: {
-    borderLeftColor: '#EA580C',
+    borderLeftWidth: 0,
   },
   lockedBorder: {
-    borderLeftColor: '#9CA3AF',
+    borderLeftWidth: 0,
   },
-  lessonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    lineHeight: 20,
-  },
-  completedText: {
-    color: '#92400E',
-  },
-  currentText: {
-    color: '#C2410C',
-  },
-  lockedText: {
-    color: '#6B7280',
-  },
+  
+  completedText: {},
+  currentText: {fontSize:16},
+  lockedText: {},
 
   // Status Styles
   statusRow: {
@@ -748,7 +672,6 @@ const styles = StyleSheet.create({
   },
   completedStatus: {
     fontSize: 12,
-    color: '#D97706',
     fontWeight: '500',
   },
   progressContainer: {
@@ -757,18 +680,15 @@ const styles = StyleSheet.create({
   progressBar: {
     width: '100%',
     height: 8,
-    backgroundColor: '#FED7AA',
     borderRadius: 4,
   },
   progressFill: {
     width: '33%',
     height: '100%',
-    backgroundColor: '#EA580C',
     borderRadius: 4,
   },
   progressText: {
     fontSize: 12,
-    color: '#C2410C',
     marginTop: 4,
     fontWeight: '500',
   },
@@ -784,12 +704,10 @@ const styles = StyleSheet.create({
   completionTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#92400E',
     marginBottom: 8,
   },
   completionText: {
     fontSize: 14,
-    color: '#D97706',
     textAlign: 'center',
     lineHeight: 20,
   },
@@ -809,12 +727,10 @@ const styles = StyleSheet.create({
   encouragementTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#92400E',
     marginBottom: 8,
   },
   encouragementText: {
     fontSize: 14,
-    color: '#D97706',
     textAlign: 'center',
     marginBottom: 16,
     lineHeight: 20,
@@ -826,32 +742,54 @@ const styles = StyleSheet.create({
   dailyProgressBar: {
     width: '100%',
     height: 12,
-    backgroundColor: '#FDE68A',
     borderRadius: 6,
   },
   dailyProgressFill: {
     height: '100%',
-    backgroundColor: '#D97706',
     borderRadius: 6,
   },
   dailyProgressText: {
     fontSize: 12,
-    color: '#92400E',
     marginTop: 8,
     fontWeight: '500',
   },
-  
-  // Reset button styles
-  resetButton: {
-    backgroundColor: '#DC2626',
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
-    marginVertical: 12,
+
+  // Lesson Content Styles
+  lessonHeader: {
+    marginHorizontal: 16,
+    marginBottom: 20,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    borderRadius: 16,
   },
-  resetButtonText: {
-    color: '#FFFFFF',
+  lessonTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 4,
+    textAlign: 'center',
+  },
+  lessonSubtitle: {
     fontSize: 14,
+    opacity: 0.9,
+  },
+  lessonContent: {
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+  },
+  lessonText: {
+    fontSize: 16,
+    lineHeight: 24,
+    marginBottom: 2,
+  },
+  engageButton: {
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  engageButtonText: {
+    fontSize: 16,
     fontWeight: '600',
   },
 });

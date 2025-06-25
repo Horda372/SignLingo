@@ -1,0 +1,1286 @@
+export const lessons = [
+  {
+    id: 31,
+    Text: "Dr. Bill Vicars walks you through the ASL manual alphabet, demonstrating each letter’s handshape with slow, clear examples. You’ll see proper hand orientation and movement, learn how to transition between letters smoothly, and get tips on maintaining consistent spacing.\n\nKey takeaways:\n- Exact handshape for each letter A–Z\n- Proper palm orientation and finger positioning\n- Smooth transitions between letters\n- Techniques for practicing muscle memory\n- Common pitfalls in fingerspelling and how to correct them",
+    PhotoLink: "https://www.youtube.com/watch?v=va1aAXpVr2w",
+    IsLast: false,
+    LevelId: "ABC's in ASL: Learn how to Fingerspell!",
+  },
+  {
+    id: 32,
+    Text: "This tutorial reinforces your fingerspelling skills by revisiting the manual alphabet at a natural conversational pace. Each letter is shown in context, with Dr. Bill offering practice drills and visual cues to improve speed and clarity.\n\nKey takeaways:\n- Contextual fingerspelling in phrases\n- Increasing your fingerspelling speed\n- Visual cues for letter clarity\n- Drill exercises to build fluency\n- Avoiding hesitation and awkward pauses",
+    PhotoLink: "https://www.youtube.com/watch?v=eeAq4gkOEUY",
+    IsLast: false,
+    LevelId: "American Sign Language (ASL) fingerspelling",
+  },
+  {
+    id: 33,
+    Text: "Learn how to sign numbers 1–10 in ASL with step-by-step guidance. Dr. Bill demonstrates each number slowly, explains subtle differences in handshape, and shows how to count seamlessly in everyday conversation.\n\nKey takeaways:\n- Accurate handshape for numbers 1–10\n- Variations in palm orientation for clarity\n- Counting in sequence without breaking flow\n- Tips for integrating numbers into ASL sentences\n- Common mistakes when signing numbers and how to fix them",
+    PhotoLink: "https://www.youtube.com/watch?v=ADhWpau22Aw",
+    IsLast: true,
+    LevelId: "Numbers 1 through 10 in American Sign Language (ASL)",
+  },
+  {
+    id: 1,
+    Text: "In this first lesson, Dr. Bill introduces the very basics of American Sign Language. You’ll learn the foundational handshape required for fingerspelling the alphabet. The instructor emphasizes proper hand positioning and orientation. You see clear demonstrations of each letter, one at a time, with slow pacing. By the end, you understand how to practice the ABCs on your own.\n\nKey takeaways:\n- The ASL fingerspelling handshape and orientation\n- How to form each letter distinctly\n- The importance of hand movement clarity\n- Tips for steady practice and muscle memory\n- Common mistakes to avoid when starting out",
+    PhotoLink: "https://www.youtube.com/watch?v=kCKFF0Berc8",
+    IsLast: false,
+    LevelId: "Lesson 1",
+  },
+  {
+    id: 2,
+    Text: "This lesson builds on Lesson 1 by introducing your first set of everyday signs. You learn how to sign simple greetings like “hello” and “thank you.” The video shows narrative context—using signs in short dialogues. The instructor models each sign at full speed, then breaks it down in slow motion. You leave with a few practical phrases you can practice right away.\n\nKey takeaways:\n- Basic greetings and courtesies in ASL\n- The flow of a simple signed conversation\n- How facial expression supports meaning\n- Techniques for transitioning between signs\n- Practice tips for signing in context",
+    PhotoLink: "https://www.youtube.com/watch?v=nBhMSjPCfNk",
+    IsLast: false,
+    LevelId: "Lesson 2",
+  },
+  {
+    id: 3,
+    Text: "Lesson 3 focuses on handshapes for common verbs and adjectives. You see signs like “eat,” “drink,” “big,” and “small.” The instructor gives repeated drills, first slowly, then at normal speed. Emphasis is placed on movement direction and palm orientation. By the end, you can sign a few simple sentences by combining nouns and verbs you already know.\n\nKey takeaways:\n- How to form verb and adjective handshapes\n- The role of movement and palm orientation\n- Drills to improve fluidity and accuracy\n- Combining signs into short phrases\n- Self-check techniques to ensure correct form",
+    PhotoLink: "https://www.youtube.com/watch?v=KZC_eb_3xWk",
+    IsLast: false,
+    LevelId: "Lesson 3",
+  },
+  {
+    id: 4,
+    Text: "In Lesson 4, Katelyn teaches family and household signs: “mother,” “father,” “house,” and “home.” You see clear side-by-side comparisons of similar-looking signs to avoid confusion. The video alternates between practice drills and example sentences. You learn how to incorporate facial grammar to show possession. By the end, you can describe your family in ASL.\n\nKey takeaways:\n- Handshapes for family-related signs\n- Distinguishing similar signs through movement\n- Using facial expressions for possessive meaning\n- Practice routines for memorization\n- How to build simple sentences about family",
+    PhotoLink: "https://www.youtube.com/watch?v=JVTsQBVL0eA",
+    IsLast: false,
+    LevelId: "Lesson 4",
+  },
+  {
+    id: 5,
+    Text: "Lesson 5 reviews and expands vocabulary around everyday objects. Sarah demonstrates signs like “book,” “pen,” “paper,” and “computer.” Each sign is shown in context—signing short descriptive phrases. The video includes a quick review of previous lessons to reinforce memory. By the end, you can list items you see around you using ASL.\n\nKey takeaways:\n- New vocabulary for common objects\n- Contextual practice in descriptive sentences\n- Quick review of earlier handshapes\n- Tips for smooth transitions between signs\n- Reinforcement strategies for retention",
+    PhotoLink: "https://www.youtube.com/watch?v=ob0Vg9Mw-4I",
+    IsLast: false,
+    LevelId: "Lesson 5",
+  },
+  {
+    id: 6,
+    Text: "This lesson begins by revisiting foundational signs from previous modules.\nThe presenter shows each sign slowly and clearly to reinforce muscle memory.\nThen, they demonstrate how to combine two or more signs into short phrases.\nAttention is given to facial expressions and non-manual markers.\nFinally, there is a brief narrative to practice context.\n\nKey takeaways:\n- Reinforced basic sign vocabulary\n- Practice of flow between signs\n- Emphasis on facial expressions\n- Contextual story example\n- Clarity of handshape and movement",
+    PhotoLink: "https://www.youtube.com/watch?v=h8JiHOV8V8I",
+    IsLast: false,
+    LevelId: "Lesson 06",
+  },
+  {
+    id: 7,
+    Text: "In Lesson 07, the instructor introduces new everyday words and gestures.\nThey break down each concept with slow repetition for better retention.\nViewers see each sign from multiple angles to capture hand orientation.\nShort dialogues are used to show how signs interact in conversation.\nA quick review at the end reinforces everything covered.\n\nKey takeaways:\n- Introduction of new vocabulary\n- Multi-angle demonstrations\n- Slow repetition for practice\n- Short conversational examples\n- End-of-lesson summary",
+    PhotoLink: "https://www.youtube.com/watch?v=iA1vdBurI74",
+    IsLast: false,
+    LevelId: "Lesson 07",
+  },
+  {
+    id: 8,
+    Text: "This lesson focuses on basic sentence structure in ASL.\nThe teacher signs simple statements and questions with clear pacing.\nYou learn how to position your hands for subject-verb-object order.\nFacial expressions are shown as integral parts of questions.\nA short story ties all new signs into a coherent narrative.\n\nKey takeaways:\n- Understanding ASL sentence order\n- Integration of facial grammar\n- Practice with statements and questions\n- Real-world narrative example\n- Clear demonstration of pacing",
+    PhotoLink: "https://www.youtube.com/watch?v=5RqZRGT3b84",
+    IsLast: false,
+    LevelId: "Lesson 08",
+  },
+  {
+    id: 9,
+    Text: "Lesson 09 revisits the previous signs with added variations.\nThe presenter models each sign in two different contexts.\nYou learn to adjust speed and size of signs for emphasis.\nPauses are built in for you to imitate and self-correct.\nA brief role-play shows the signs in everyday usage.\n\nKey takeaways:\n- Variations on familiar signs\n- Emphasis through movement adjustments\n- Built-in imitation pauses\n- Contextual role-play demonstration\n- Self-correction tips",
+    PhotoLink: "https://www.youtube.com/watch?v=6bsTw2ouTpQ",
+    IsLast: false,
+    LevelId: "Lesson 09",
+  },
+  {
+    id: 10,
+    Text: "In Lesson 10, new thematic vocabulary is introduced around family.\nEach family member sign is shown slowly and repeated for practice.\nThe instructor highlights subtle differences in handshape and location.\nA short dialogue between two people illustrates real conversation.\nThe lesson ends with a quick quiz of signs learned.\n\nKey takeaways:\n- Thematic vocabulary: family members\n- Subtle handshape distinctions\n- Repetition for muscle memory\n- Dialogue example for context\n- End-of-lesson quiz",
+    PhotoLink: "https://www.youtube.com/watch?v=BEWHGV2QIkE",
+    IsLast: false,
+    LevelId: "Lesson 10",
+  },
+  {
+    id: 11,
+    Text: "This session reviews the past lessons with a storytelling approach.\nThe narrator signs a short anecdote using learned vocabulary.\nYou see how facial expressions convey tone and emotion.\nViewers are encouraged to sign along during the story.\nA summary of key signs appears in text at the end.\n\nKey takeaways:\n- Storytelling to reinforce learning\n- Tone through facial expression\n- Encouraged participation\n- Text summary of signs\n- Focus on narrative fluency",
+    PhotoLink: "https://www.youtube.com/watch?v=7HlOFxOi6uo",
+    IsLast: false,
+    LevelId: "Lesson 11",
+  },
+  {
+    id: 12,
+    Text: "Lesson 12 covers directional verbs and spatial referencing.\nThe instructor explains how to show movement between people.\nClear examples demonstrate verb inflections for different subjects.\nYou learn to set up signing space effectively.\nA short dialogue uses these directional verbs in context.\n\nKey takeaways:\n- Directional verb usage\n- Setting up signing space\n- Verb inflection techniques\n- Contextual dialogue example\n- Spatial referencing tips",
+    PhotoLink: "https://www.youtube.com/watch?v=0OHytO5qxE8",
+    IsLast: false,
+    LevelId: "Lesson 12",
+  },
+  {
+    id: 13,
+    Text: "In this lesson, you explore everyday verbs related to movement.\nEach sign is shown at normal and slow speeds for clarity.\nAttention is paid to handshape consistency and motion path.\nThe teacher demonstrates linking multiple verbs in a sentence.\nA brief practice segment helps you internalize the flow.\n\nKey takeaways:\n- Movement-related verbs\n- Speed variation for learning\n- Consistent handshape focus\n- Linking verbs in sentences\n- Practice segment included",
+    PhotoLink: "https://www.youtube.com/watch?v=Yf6AMlBm0XY",
+    IsLast: false,
+    LevelId: "Lesson 13",
+  },
+  {
+    id: 14,
+    Text: "Lesson 14 introduces classifiers to describe objects and size.\nThe instructor explains how handshape changes convey meaning.\nExamples show classification of vehicles, shapes, and volumes.\nYou practice by describing simple scenes with classifiers.\nA recap section ties classifiers back to real-world scenarios.\n\nKey takeaways:\n- Classifier handshapes\n- Describing shapes and objects\n- Practice with simple scenes\n- Real-world application\n- Recap of key concepts",
+    PhotoLink: "https://www.youtube.com/watch?v=uiGEr74JW6k",
+    IsLast: false,
+    LevelId: "Lesson 14",
+  },
+  {
+    id: 15,
+    Text: "This lesson focuses on expressive storytelling techniques.\nThe presenter signs a short narrative with full emotion.\nYou observe how body language enhances the message.\nThere is a pause for you to retell the story in ASL.\nHelpful tips are given for improving expressiveness.\n\nKey takeaways:\n- Expressive signing in storytelling\n- Importance of body language\n- Practice retelling pause\n- Emotional context cues\n- Tips for natural delivery",
+    PhotoLink: "https://www.youtube.com/watch?v=boRKuJiw30k",
+    IsLast: true,
+    LevelId: "Lesson 15",
+  },
+  {
+    id: 16,
+    Text: "Lesson 16 introduces basic classifiers for describing location and movement.\nThe instructor demonstrates each classifier handshape clearly and slowly.\nViewers learn how to map physical space into signing space around the body.\nShort exercises guide you to practice placing objects and people spatially.\nA recap at the end ties classifiers back to everyday scenarios.\n\nKey takeaways:\n- Classifier handshape fundamentals\n- Mapping real-world space into signing space\n- Practice exercises for placement\n- Recap of classifier use in context\n- Emphasis on clear, slow demonstration",
+    PhotoLink: "https://www.youtube.com/watch?v=p_SC5CSzrLs",
+    IsLast: false,
+    LevelId: "Lesson 16",
+  },
+  {
+    id: 17,
+    Text: "In Lesson 17, you explore vocabulary for daily routines and activities.\nEach sign is shown at normal and slow speeds with repeated practice slots.\nThe teacher highlights subtle differences in handshape and movement flow.\nShort dialogues illustrate how these signs function in conversation.\nA quick self-test segment at the end reinforces retention.\n\nKey takeaways:\n- Daily routine vocabulary\n- Speed variation for clarity\n- Handshape precision tips\n- Conversational role-play\n- End-of-lesson self-test",
+    PhotoLink: "https://www.youtube.com/watch?v=GGZRweOqFtc",
+    IsLast: false,
+    LevelId: "Lesson 17",
+  },
+  {
+    id: 18,
+    Text: "Lesson 18 covers descriptive adjectives to enrich your signing.\nThe instructor introduces adjectives for color, size, and texture.\nExamples show how to place adjectives before and after nouns naturally.\nPractice prompts encourage you to describe real objects around you.\nA summary review ties all new adjectives into short sentences.\n\nKey takeaways:\n- Adjectives for color, size, texture\n- Natural adjective placement\n- Hands-on practice with everyday items\n- Short sentence integration\n- Review of key descriptive signs",
+    PhotoLink: "https://www.youtube.com/watch?v=b3P0KEwgiAM",
+    IsLast: false,
+    LevelId: "Lesson 18",
+  },
+  {
+    id: 19,
+    Text: "This lesson introduces question structures in ASL.\nYou learn how to form yes/no and WH-questions with facial grammar.\nClear examples show eyebrow and head movements for each question type.\nPractice sections allow you to sign questions back to the camera.\nA brief dialogue ties questions into a natural exchange.\n\nKey takeaways:\n- Yes/no vs. WH-question formation\n- Facial grammar cues\n- Head movement integration\n- Practice question prompts\n- Dialogue example for context",
+    PhotoLink: "https://www.youtube.com/watch?v=kpMCGZR72HY",
+    IsLast: false,
+    LevelId: "Lesson 19",
+  },
+  {
+    id: 20,
+    Text: "Lesson 20 focuses on thematic vocabulary around shopping and food.\nThe instructor introduces signs for common items and prices.\nRole-play scenarios demonstrate how to ask for items and costs.\nViewers practice signing exchanges in a market setting.\nA recap quiz at the end checks your recall of key signs.\n\nKey takeaways:\n- Shopping and food vocabulary\n- Price-asking phrases\n- Market role-play practice\n- Realistic exchange examples\n- End-of-lesson quiz",
+    PhotoLink: "https://www.youtube.com/watch?v=TrexJZFv1Ts",
+    IsLast: false,
+    LevelId: "Lesson 20",
+  },
+  {
+    id: 21,
+    Text: "In Lesson 21, you learn verbs of motion and direction.\nEach verb is shown with clear motion paths and handshape details.\nSlow-motion sections help you capture fluid movement transitions.\nShort practice sentences encourage you to combine multiple verbs.\nA summary ties motion verbs into everyday narratives.\n\nKey takeaways:\n- Motion and direction verbs\n- Fluid movement transitions\n- Slow-motion practice\n- Sentence combining exercises\n- Narrative application",
+    PhotoLink: "https://www.youtube.com/watch?v=ey7sA3MesY0",
+    IsLast: false,
+    LevelId: "Lesson 21",
+  },
+  {
+    id: 22,
+    Text: "Lesson 22 explores time signs and temporal concepts.\nYou learn how to express days, weeks, and months in ASL.\nThe instructor shows timeline setups using space and direction.\nPractice sections guide you to sign about past and future events.\nA short review quiz helps reinforce temporal vocabulary.\n\nKey takeaways:\n- Days, weeks, months signs\n- Timeline spatial setup\n- Temporal referencing practice\n- Past vs. future expression\n- End-of-lesson quiz",
+    PhotoLink: "https://www.youtube.com/watch?v=gqLgcywHLU4",
+    IsLast: false,
+    LevelId: "Lesson 22",
+  },
+  {
+    id: 23,
+    Text: "This lesson introduces conversational turn-taking cues.\nThe teacher demonstrates how to signal ready, pause, and end turns.\nExamples show both subtle and clear cues in dialogue practice.\nYou practice by alternating signing prompts with the instructor.\nA recap ties turn-taking back to real conversation flow.\n\nKey takeaways:\n- Turn-taking signals\n- Ready, pause, end cues\n- Dialogue practice examples\n- Alternating signing exercises\n- Conversation flow review",
+    PhotoLink: "https://www.youtube.com/watch?v=G9dyFNy_Ifk",
+    IsLast: false,
+    LevelId: "Lesson 23",
+  },
+  {
+    id: 24,
+    Text: "Lesson 24 covers advanced classifiers for abstract concepts.\nThe instructor explains classifiers for emotions and states.\nExamples show how to sign feelings like happiness and surprise.\nPractice sections encourage you to describe emotional scenes.\nA summary ties classifiers back into narrative practice.\n\nKey takeaways:\n- Abstract concept classifiers\n- Emotion-based handshapes\n- Scene description practice\n- Narrative integration\n- Recap of key classifiers",
+    PhotoLink: "https://www.youtube.com/watch?v=Z32sSxAW2gw",
+    IsLast: false,
+    LevelId: "Lesson 24",
+  },
+  {
+    id: 25,
+    Text: "In Lesson 25, you explore complex sentence structures.\nThe instructor combines conditional and relative clauses in ASL.\nClear examples show how to sign “if…then” and “who/which” phrases.\nPractice drills guide you to build multi-clause sentences.\nA short story at the end uses these structures naturally.\n\nKey takeaways:\n- Conditional clause formation\n- Relative clause usage\n- Multi-clause practice drills\n- Story integration\n- Emphasis on fluid sentence flow",
+    PhotoLink: "https://www.youtube.com/watch?v=EMaR5_kQNqg",
+    IsLast: false,
+    LevelId: "Lesson 25",
+  },
+  {
+    id: 26,
+    Text: "Lesson 26 focuses on cultural norms and register in ASL.\nThe teacher discusses polite vs. casual signing styles.\nExamples illustrate when to use formal grammar and vocabulary.\nPractice prompts let you switch styles in sample dialogues.\nA recap highlights key cultural notes to remember.\n\nKey takeaways:\n- Formal vs. casual register\n- Politeness markers in ASL\n- Style-switching exercises\n- Sample dialogue practice\n- Cultural norms summary",
+    PhotoLink: "https://www.youtube.com/watch?v=XVh0bOVLSxs",
+    IsLast: false,
+    LevelId: "Lesson 26",
+  },
+  {
+    id: 27,
+    Text: "This lesson covers finger‐spelling strategies and tips.\nThe instructor demonstrates clear, consistent letter shapes.\nYou learn how to spell names and uncommon words fluidly.\nPractice sections include common tricky words and names.\nA quick review quiz reinforces your finger‐spelling accuracy.\n\nKey takeaways:\n- Clear letter‐shape demonstration\n- Fluid spelling techniques\n- Practice with tricky words\n- Name‐spelling exercises\n- Accuracy quiz",
+    PhotoLink: "https://www.youtube.com/watch?v=EQYWE1ZUt1o",
+    IsLast: false,
+    LevelId: "Lesson 27",
+  },
+  {
+    id: 28,
+    Text: "Lesson 28 introduces regional dialects in ASL signs.\nThe instructor shows variations of common signs across regions.\nExamples highlight differences in handshape and movement.\nPractice prompts encourage you to try each regional variant.\nA summary discusses when to choose one variant over another.\n\nKey takeaways:\n- ASL regional dialects\n- Sign variation examples\n- Practice regional variants\n- Usage context tips\n- Dialect selection guidance",
+    PhotoLink: "https://www.youtube.com/watch?v=kYh7kMzZVuE",
+    IsLast: false,
+    LevelId: "Lesson 28",
+  },
+  {
+    id: 29,
+    Text: "In Lesson 29, you learn about topic-comment structures.\nThe teacher explains how to set topics up front in a sentence.\nExamples show different ways to emphasize the comment portion.\nPractice drills guide you through reordering sentences naturally.\nA short dialogue ties topic-comment back to storytelling.\n\nKey takeaways:\n- Topic-comment sentence framing\n- Emphasis placement examples\n- Practice reordering drills\n- Dialogue integration\n- Storytelling application",
+    PhotoLink: "https://www.youtube.com/watch?v=CQ6Nt-Az624",
+    IsLast: false,
+    LevelId: "Lesson 29",
+  },
+  {
+    id: 30,
+    Text: "Lesson 30 revisits key concepts from this module in review.\nThe instructor signs a short narrative incorporating previous lessons.\nViewers are prompted to sign along and self-correct common mistakes.\nA summary of top tips appears at the end for quick reference.\nFinal practice encourages you to tell the story independently.\n\nKey takeaways:\n- Comprehensive module review\n- Guided narrative signing\n- Self-correction prompts\n- Summary of top tips\n- Independent storytelling exercise",
+    PhotoLink: "https://www.youtube.com/watch?v=gm5gDnNPd2w",
+    IsLast: true,
+    LevelId: "Lesson 30",
+  },
+];
+
+export const questions = [
+  {
+    id: 0,
+    Questions: [
+      {
+        Text: "What handshape and orientation are foundational for ASL fingerspelling in Lesson 1?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Flat hand palm down", isCorrect: false },
+          { option: "Fist with thumb across fingers", isCorrect: true },
+          { option: "Open five-fingers spread", isCorrect: false },
+          { option: "Pointer-finger only", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Which practice tip is emphasized in Lesson 1?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Quick repetition without rest", isCorrect: false },
+          { option: "Slow muscle‐memory drills", isCorrect: true },
+          { option: "Signing with eyes closed", isCorrect: false },
+          { option: "Signing in front of a mirror once", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What common mistake should beginners avoid according to Lesson 1?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Overextending the wrist", isCorrect: false },
+          { option: "Incorrect thumb placement", isCorrect: true },
+          { option: "Talking while signing", isCorrect: false },
+          { option: "Signing too fast", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 1,
+    Questions: [
+      {
+        Text: "Which greeting is taught in Lesson 2?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Goodnight", isCorrect: false },
+          { option: "Hello", isCorrect: true },
+          { option: "Sorry", isCorrect: false },
+          { option: "Excuse me", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What non-manual marker supports meaning in Lesson 2?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Blowing air", isCorrect: false },
+          { option: "Facial expression", isCorrect: true },
+          { option: "Foot tap", isCorrect: false },
+          { option: "Shoulder shrug", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 2 demonstrates signing at full speed followed by what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Written breakdown", isCorrect: false },
+          { option: "Slow-motion breakdown", isCorrect: true },
+          { option: "Group practice", isCorrect: false },
+          { option: "Audio narration", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    Questions: [
+      {
+        Text: "Which types of signs are the focus of Lesson 3 drills?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Nouns and pronouns", isCorrect: false },
+          { option: "Verbs and adjectives", isCorrect: true },
+          { option: "Adverbs and conjunctions", isCorrect: false },
+          { option: "Prepositions and interjections", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What aspect of movement does Lesson 3 emphasize?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Palm orientation", isCorrect: true },
+          { option: "Finger spacing", isCorrect: false },
+          { option: "Elbow height", isCorrect: false },
+          { option: "Shoulder position", isCorrect: false },
+        ],
+      },
+      {
+        Text: "By the end of Lesson 3 you can combine signs into?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Letter sequences", isCorrect: false },
+          { option: "Short sentences", isCorrect: true },
+          { option: "Stories", isCorrect: false },
+          { option: "Poems", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    Questions: [
+      {
+        Text: "Which family sign is taught in Lesson 4?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Sibling", isCorrect: false },
+          { option: "Mother", isCorrect: true },
+          { option: "Cousin", isCorrect: false },
+          { option: "Aunt", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What distinguishes similar signs in Lesson 4?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Size of sign", isCorrect: false },
+          { option: "Movement direction", isCorrect: true },
+          { option: "Voice tone", isCorrect: false },
+          { option: "Eye movement", isCorrect: false },
+        ],
+      },
+      {
+        Text: "How is possession shown in Lesson 4?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Facial expression", isCorrect: true },
+          { option: "Foot tap", isCorrect: false },
+          { option: "Head nod", isCorrect: false },
+          { option: "Handshake", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    Questions: [
+      {
+        Text: "Which object sign appears in Lesson 5?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Book", isCorrect: true },
+          { option: "Table", isCorrect: false },
+          { option: "Window", isCorrect: false },
+          { option: "Phone", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 5 includes a quick review of previous lessons for what purpose?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Assessment only", isCorrect: false },
+          { option: "Reinforce memory", isCorrect: true },
+          { option: "Introduce new signs", isCorrect: false },
+          { option: "Grammar rules", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What tip is given in Lesson 5 for transitions between signs?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Use larger movements", isCorrect: false },
+          { option: "Smooth hand flow", isCorrect: true },
+          { option: "Pause between signs", isCorrect: false },
+          { option: "Speak finger letters", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    Questions: [
+      {
+        Text: "Lesson 06 revisits foundational signs then shows combining how many into phrases?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Only one", isCorrect: false },
+          { option: "Two or more", isCorrect: true },
+          { option: "Exactly three", isCorrect: false },
+          { option: "Five", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What non-manual feature receives emphasis in Lesson 06?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Eye gaze", isCorrect: false },
+          { option: "Facial expression", isCorrect: true },
+          { option: "Foot placement", isCorrect: false },
+          { option: "Voice volume", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The brief narrative in Lesson 06 is for practicing what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Rhythm", isCorrect: false },
+          { option: "Contextual signing", isCorrect: true },
+          { option: "Speed", isCorrect: false },
+          { option: "Finger dexterity", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    Questions: [
+      {
+        Text: "Lesson 07 introduces new vocabulary with what retention technique?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Silent reading", isCorrect: false },
+          { option: "Multi-angle demos", isCorrect: true },
+          { option: "Listening drills", isCorrect: false },
+          { option: "Group recitation", isCorrect: false },
+        ],
+      },
+      {
+        Text: "How many angles are shown for each sign in Lesson 07?",
+        Type: "MCQ",
+        Answers: [
+          { option: "One", isCorrect: false },
+          { option: "Two or more", isCorrect: true },
+          { option: "Three exactly", isCorrect: false },
+          { option: "None", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What wraps up Lesson 07 for reinforcement?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Written test", isCorrect: false },
+          { option: "End-of-lesson summary", isCorrect: true },
+          { option: "Finger stretching", isCorrect: false },
+          { option: "Group quiz", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    Questions: [
+      {
+        Text: "Which ASL sentence order is taught in Lesson 08?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Verb-subject-object", isCorrect: false },
+          { option: "Subject-verb-object", isCorrect: true },
+          { option: "Object-verb-subject", isCorrect: false },
+          { option: "Subject-object-verb", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What role do facial expressions play in Lesson 08?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Indicate tense", isCorrect: false },
+          { option: "Form questions", isCorrect: true },
+          { option: "Change vocabulary", isCorrect: false },
+          { option: "Measure speed", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The short story in Lesson 08 is used to practice what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Narrative fluency", isCorrect: true },
+          { option: "Alphabet", isCorrect: false },
+          { option: "Counting", isCorrect: false },
+          { option: "Drawing", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 9,
+    Questions: [
+      {
+        Text: "Lesson 09 introduces variations by adjusting what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Color of background", isCorrect: false },
+          { option: "Speed and size of signs", isCorrect: true },
+          { option: "Voice pitches", isCorrect: false },
+          { option: "Camera angle only", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What built-in feature helps self-correction in Lesson 09?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Imitation pauses", isCorrect: true },
+          { option: "Written answers", isCorrect: false },
+          { option: "Audio prompts", isCorrect: false },
+          { option: "Mirror practice", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The role-play at the end of Lesson 09 demonstrates signs in what context?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Everyday usage", isCorrect: true },
+          { option: "Formal lectures", isCorrect: false },
+          { option: "Children's games", isCorrect: false },
+          { option: "News reporting", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    Questions: [
+      {
+        Text: "What thematic vocabulary is covered in Lesson 10?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Foods", isCorrect: false },
+          { option: "Family members", isCorrect: true },
+          { option: "Jobs", isCorrect: false },
+          { option: "Transportation", isCorrect: false },
+        ],
+      },
+      {
+        Text: "How does Lesson 10 test recall at the end?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Signing quiz", isCorrect: true },
+          { option: "Written essay", isCorrect: false },
+          { option: "Multiple-choice reading", isCorrect: false },
+          { option: "Group discussion", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Subtle differences in Lesson 10 focus on what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Handshape and location", isCorrect: true },
+          { option: "Voice tone", isCorrect: false },
+          { option: "Foot position", isCorrect: false },
+          { option: "Eye color", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 11,
+    Questions: [
+      {
+        Text: "Which method reinforces learning in Lesson 11?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Storytelling", isCorrect: true },
+          { option: "Finger drills", isCorrect: false },
+          { option: "Written test", isCorrect: false },
+          { option: "Silent practice", isCorrect: false },
+        ],
+      },
+      {
+        Text: "During Lesson 11, viewers are encouraged to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Read captions only", isCorrect: false },
+          { option: "Sign along with story", isCorrect: true },
+          { option: "Write the signs", isCorrect: false },
+          { option: "Record audio", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What appears at the end of Lesson 11 for reference?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Summary of key signs", isCorrect: true },
+          { option: "New vocabulary list", isCorrect: false },
+          { option: "Quiz answers", isCorrect: false },
+          { option: "Music video", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 12,
+    Questions: [
+      {
+        Text: "Lesson 12 teaches which type of verbs?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Auxiliary verbs", isCorrect: false },
+          { option: "Directional verbs", isCorrect: true },
+          { option: "Reflexive verbs", isCorrect: false },
+          { option: "Modal verbs", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What spatial setup is introduced in Lesson 12?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Time line in space", isCorrect: false },
+          { option: "Signing space mapping", isCorrect: true },
+          { option: "Finger grid", isCorrect: false },
+          { option: "Body chart", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The brief dialogue in Lesson 12 helps practice?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Classifiers", isCorrect: false },
+          { option: "Directional verbs in context", isCorrect: true },
+          { option: "Alphabet", isCorrect: false },
+          { option: "Numbers", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 13,
+    Questions: [
+      {
+        Text: "Which verbs are the focus of Lesson 13?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Movement-related verbs", isCorrect: true },
+          { option: "Possessive verbs", isCorrect: false },
+          { option: "Existential verbs", isCorrect: false },
+          { option: "Emotional verbs", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 13 shows verbs at what speeds?",
+        Type: "MCQ",
+        Answers: [
+          { option: "One speed only", isCorrect: false },
+          { option: "Normal and slow", isCorrect: true },
+          { option: "Fast only", isCorrect: false },
+          { option: "Random speeds", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What practice segment does Lesson 13 include?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Drilling classifiers", isCorrect: false },
+          { option: "Linking verbs in sentences", isCorrect: true },
+          { option: "Finger exercises", isCorrect: false },
+          { option: "Facial drills", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 14,
+    Questions: [
+      {
+        Text: "Lesson 14 classifiers describe what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Objects and size", isCorrect: true },
+          { option: "Time", isCorrect: false },
+          { option: "Feelings", isCorrect: false },
+          { option: "Directions", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What practice does Lesson 14 include?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Describing scenes with classifiers", isCorrect: true },
+          { option: "Written descriptions", isCorrect: false },
+          { option: "Audio recording", isCorrect: false },
+          { option: "Group role-play", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The recap in Lesson 14 ties classifiers back to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Emotional stories", isCorrect: false },
+          { option: "Real-world scenarios", isCorrect: true },
+          { option: "Alphabet drills", isCorrect: false },
+          { option: "Numbers practice", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 15,
+    Questions: [
+      {
+        Text: "What technique is emphasized in Lesson 15?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Expressive storytelling", isCorrect: true },
+          { option: "Silent practice", isCorrect: false },
+          { option: "Finger drills", isCorrect: false },
+          { option: "Written narration", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 15 pauses allow you to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Listen only", isCorrect: false },
+          { option: "Retell the story in ASL", isCorrect: true },
+          { option: "Write the story", isCorrect: false },
+          { option: "Draw diagrams", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Which non-manual marker is highlighted in Lesson 15?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Body language", isCorrect: true },
+          { option: "Foot tapping", isCorrect: false },
+          { option: "Handshake", isCorrect: false },
+          { option: "Head nod", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 16,
+    Questions: [
+      {
+        Text: "Which classifiers are introduced in Lesson 16?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Location and movement", isCorrect: true },
+          { option: "Time of day", isCorrect: false },
+          { option: "Emotional states", isCorrect: false },
+          { option: "Colors", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 16 exercises guide you to practice?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Alphabet order", isCorrect: false },
+          { option: "Placing objects spatially", isCorrect: true },
+          { option: "Finger dexterity only", isCorrect: false },
+          { option: "Voice projection", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The recap in Lesson 16 ties classifiers to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Everyday scenarios", isCorrect: true },
+          { option: "Written quizzes", isCorrect: false },
+          { option: "Music", isCorrect: false },
+          { option: "Drawing", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 17,
+    Questions: [
+      {
+        Text: "What theme is covered in Lesson 17?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Weather terms", isCorrect: false },
+          { option: "Daily routines and activities", isCorrect: true },
+          { option: "Animals", isCorrect: false },
+          { option: "Emotions", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 17 practice includes?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Descriptive writing", isCorrect: false },
+          { option: "Short dialogues", isCorrect: true },
+          { option: "Finger spelling only", isCorrect: false },
+          { option: "Counting games", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What helps reinforce retention in Lesson 17?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Self-test segment", isCorrect: true },
+          { option: "Background music", isCorrect: false },
+          { option: "Group singing", isCorrect: false },
+          { option: "Drawing signs", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 18,
+    Questions: [
+      {
+        Text: "Which adjectives are introduced in Lesson 18?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Time-related", isCorrect: false },
+          { option: "Texture, color, size", isCorrect: true },
+          { option: "Emotional", isCorrect: false },
+          { option: "Directional", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 18 practice prompts you to describe?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Abstract concepts", isCorrect: false },
+          { option: "Real objects around you", isCorrect: true },
+          { option: "Numbers only", isCorrect: false },
+          { option: "Fingerspelling sequences", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The summary in Lesson 18 ties adjectives into?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Long stories", isCorrect: false },
+          { option: "Short sentences", isCorrect: true },
+          { option: "Poems", isCorrect: false },
+          { option: "Songs", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 19,
+    Questions: [
+      {
+        Text: "Which question type is covered in Lesson 19?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Imperative", isCorrect: false },
+          { option: "Yes/no and WH-questions", isCorrect: true },
+          { option: "Exclamations", isCorrect: false },
+          { option: "Conditional", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What facial cue signals WH-questions in Lesson 19?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Eyebrow raise", isCorrect: true },
+          { option: "Nose wrinkle", isCorrect: false },
+          { option: "Lip bite", isCorrect: false },
+          { option: "Head shake", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 19 practice includes signing questions back to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Yourself", isCorrect: false },
+          { option: "The camera", isCorrect: true },
+          { option: "A partner only", isCorrect: false },
+          { option: "No one", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 20,
+    Questions: [
+      {
+        Text: "What vocabulary theme is in Lesson 20?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Transportation", isCorrect: false },
+          { option: "Shopping and food", isCorrect: true },
+          { option: "Weather terms", isCorrect: false },
+          { option: "Medical terms", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Role-play in Lesson 20 simulates a visit to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Restaurant", isCorrect: false },
+          { option: "Market/shopping", isCorrect: true },
+          { option: "Airport", isCorrect: false },
+          { option: "Gym", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The recap quiz in Lesson 20 checks recall of?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Directional verbs", isCorrect: false },
+          { option: "Shopping signs", isCorrect: true },
+          { option: "Time signs", isCorrect: false },
+          { option: "Family signs", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 21,
+    Questions: [
+      {
+        Text: "Lesson 21 covers which type of verbs?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Linking verbs", isCorrect: false },
+          { option: "Motion and direction verbs", isCorrect: true },
+          { option: "Possessive verbs", isCorrect: false },
+          { option: "Existential verbs", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What practice helps you combine multiple verbs in Lesson 21?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Sentence drills", isCorrect: true },
+          { option: "Alphabet practice", isCorrect: false },
+          { option: "Finger exercises", isCorrect: false },
+          { option: "Facial drills", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Slow-motion sections in Lesson 21 highlight?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Fluid movement transitions", isCorrect: true },
+          { option: "Background music", isCorrect: false },
+          { option: "Color coding", isCorrect: false },
+          { option: "Written text", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 22,
+    Questions: [
+      {
+        Text: "Lesson 22 teaches signs for which time units?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Hours and minutes", isCorrect: false },
+          { option: "Days, weeks, and months", isCorrect: true },
+          { option: "Seasons", isCorrect: false },
+          { option: "Years only", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What spatial tool is used in Lesson 22 to show timeline?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Floor chart", isCorrect: false },
+          { option: "Signing space mapping", isCorrect: true },
+          { option: "Finger counting", isCorrect: false },
+          { option: "Voice cues", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Practice in Lesson 22 focuses on?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Temporal referencing", isCorrect: true },
+          { option: "Finger dexterity", isCorrect: false },
+          { option: "Rhythm", isCorrect: false },
+          { option: "Eye contact", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 23,
+    Questions: [
+      {
+        Text: "Lesson 23 covers which conversational skill?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Topic-comment", isCorrect: false },
+          { option: "Turn-taking cues", isCorrect: true },
+          { option: "Fingerspelling fluency", isCorrect: false },
+          { option: "Directional verbs", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Examples in Lesson 23 show cues for?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Ready, pause, and end turns", isCorrect: true },
+          { option: "Speed changes", isCorrect: false },
+          { option: "Color coding", isCorrect: false },
+          { option: "Volume control", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Practice in Lesson 23 alternates signing prompts with?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Written responses", isCorrect: false },
+          { option: "The instructor", isCorrect: true },
+          { option: "Background audio", isCorrect: false },
+          { option: "Mirror only", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 24,
+    Questions: [
+      {
+        Text: "Lesson 24 introduces classifiers for what?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Directions", isCorrect: false },
+          { option: "Abstract concepts like emotions", isCorrect: true },
+          { option: "Family members", isCorrect: false },
+          { option: "Daily routines", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Practice in Lesson 24 asks you to describe?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Static objects", isCorrect: false },
+          { option: "Emotional scenes", isCorrect: true },
+          { option: "Numbers", isCorrect: false },
+          { option: "Colors", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The summary in Lesson 24 ties classifiers back into?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Grammar rules", isCorrect: false },
+          { option: "Narrative practice", isCorrect: true },
+          { option: "Alphabet drills", isCorrect: false },
+          { option: "Music", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 25,
+    Questions: [
+      {
+        Text: "Lesson 25 covers which clause type?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Relative clauses", isCorrect: false },
+          { option: "Conditional clauses", isCorrect: true },
+          { option: "Passive clauses", isCorrect: false },
+          { option: "Comparative clauses", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Which practice does Lesson 25 include?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Drills for multi-clause sentences", isCorrect: true },
+          { option: "Alphabet practice", isCorrect: false },
+          { option: "Finger exercises", isCorrect: false },
+          { option: "Music cues", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The short story at the end of Lesson 25 uses structures naturally to practice?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Conditional and relative clauses", isCorrect: true },
+          { option: "Only conditional clauses", isCorrect: false },
+          { option: "Only relative clauses", isCorrect: false },
+          { option: "Passive voice", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 26,
+    Questions: [
+      {
+        Text: "Lesson 26 discusses which register difference?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Loud vs. soft", isCorrect: false },
+          { option: "Fast vs. slow", isCorrect: false },
+          { option: "Formal vs. casual", isCorrect: true },
+          { option: "Large vs. small", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Practice in Lesson 26 lets you switch between?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Two regional dialects", isCorrect: false },
+          { option: "Formal and casual styles", isCorrect: true },
+          { option: "Colors and sizes", isCorrect: false },
+          { option: "Different speeds", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The recap in Lesson 26 highlights?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Key cultural norms", isCorrect: true },
+          { option: "Finger drills", isCorrect: false },
+          { option: "Alphabet order", isCorrect: false },
+          { option: "Music choices", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 27,
+    Questions: [
+      {
+        Text: "Lesson 27 focuses on which skill?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Expressive storytelling", isCorrect: false },
+          { option: "Finger-spelling strategies", isCorrect: true },
+          { option: "Directional verbs", isCorrect: false },
+          { option: "Classifiers", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Which practice does Lesson 27 include?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Name-spelling exercises", isCorrect: true },
+          { option: "Story retelling", isCorrect: false },
+          { option: "Story reading", isCorrect: false },
+          { option: "Finger stretches", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What reinforces accuracy in Lesson 27?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Written quiz", isCorrect: false },
+          { option: "Quick review quiz", isCorrect: true },
+          { option: "Group discussion", isCorrect: false },
+          { option: "Silent practice", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 28,
+    Questions: [
+      {
+        Text: "Lesson 28 covers variations based on?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Instructor preference", isCorrect: false },
+          { option: "Regional dialects", isCorrect: true },
+          { option: "Time of day", isCorrect: false },
+          { option: "Emotional context", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Practice in Lesson 28 encourages you to try each?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Regional variant", isCorrect: true },
+          { option: "Speed variant", isCorrect: false },
+          { option: "Color variant", isCorrect: false },
+          { option: "Music variant", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The summary in Lesson 28 discusses when to choose?",
+        Type: "MCQ",
+        Answers: [
+          { option: "One dialect over another", isCorrect: true },
+          { option: "Formal vs. casual", isCorrect: false },
+          { option: "Fast vs. slow", isCorrect: false },
+          { option: "Large vs. small", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 29,
+    Questions: [
+      {
+        Text: "Which structure is the focus of Lesson 29?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Conditional clauses", isCorrect: false },
+          { option: "Topic-comment framing", isCorrect: true },
+          { option: "Passive voice", isCorrect: false },
+          { option: "Comparisons", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Lesson 29 practice drills guide you through?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Reordering sentences", isCorrect: true },
+          { option: "Finger exercises", isCorrect: false },
+          { option: "Rhythm practice", isCorrect: false },
+          { option: "Color coding", isCorrect: false },
+        ],
+      },
+      {
+        Text: "The dialogue in Lesson 29 ties topic-comment back to?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Storytelling", isCorrect: true },
+          { option: "Numbers", isCorrect: false },
+          { option: "Fingerspelling", isCorrect: false },
+          { option: "Music", isCorrect: false },
+        ],
+      },
+    ],
+  },
+  {
+    id: 30,
+    Questions: [
+      {
+        Text: "What does Lesson 30 review?",
+        Type: "MCQ",
+        Answers: [
+          { option: "New vocabulary only", isCorrect: false },
+          { option: "Key concepts from module", isCorrect: true },
+          { option: "Music theory", isCorrect: false },
+          { option: "Grammar rules only", isCorrect: false },
+        ],
+      },
+      {
+        Text: "Viewers are prompted to do what at the end of Lesson 30?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Watch another video", isCorrect: false },
+          { option: "Tell the story independently", isCorrect: true },
+          { option: "Write a summary", isCorrect: false },
+          { option: "Take notes only", isCorrect: false },
+        ],
+      },
+      {
+        Text: "What appears at the end of Lesson 30 for quick reference?",
+        Type: "MCQ",
+        Answers: [
+          { option: "Top tips summary", isCorrect: true },
+          { option: "New quiz", isCorrect: false },
+          { option: "Song lyrics", isCorrect: false },
+          { option: "Written essay", isCorrect: false },
+        ],
+      },
+    ],
+  },
+];

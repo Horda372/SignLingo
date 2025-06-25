@@ -1,80 +1,94 @@
-import React, { useState } from 'react';
+// SettingsScreen.js
+import React from 'react';
 import { ScrollView, View, Text, Pressable, Switch, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
+import { darkModeColors, lightModeColors } from '../../constants/themeColors';
+import { useCustomTheme } from '../../utils/utils';
 
 export default function SettingsScreen() {
   const router = useRouter();
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const colorScheme = useColorScheme();
-  const background = Colors[colorScheme ?? 'light'].background;
-  const brown = '#92400E';
+  const { isDark, toggle } = useCustomTheme();
+  const theme = isDark ? darkModeColors : lightModeColors;
 
-  const toggleDarkMode = () => setIsDarkMode(prev => !prev);
   const handleLogout = () => {
     // TODO: implement logout logic
     console.log('Logout pressed');
   };
 
+  const iconColor = theme.numberBadge;
+
   return (
     <ScrollView
-      style={[styles.container, { backgroundColor: background }]}
+      style={[styles.container, { backgroundColor: theme.background }]}
       contentContainerStyle={styles.content}
     >
       {/* Profile */}
       <Pressable
-        style={styles.optionRow}
+        style={({ pressed }) => [
+          styles.optionRow,
+          { backgroundColor: pressed ? theme.buttonBgPressed : theme.buttonBg },
+        ]}
         onPress={() => router.push('/settingsComponents/ProfileOption')}
       >
-        <Ionicons name="person" size={24} color={brown} style={styles.icon} />
-        <Text style={[styles.optionText, { color: brown }]}>Profile</Text>
-        <Ionicons name="chevron-forward" size={20} color={brown} />
+        <Ionicons name="person" size={24} color={iconColor} style={styles.icon} />
+        <Text style={[styles.optionText, { color: iconColor }]}>Profile</Text>
+        <Ionicons name="chevron-forward" size={20} color={iconColor} />
       </Pressable>
 
       {/* Notifications */}
       <Pressable
-        style={styles.optionRow}
+        style={({ pressed }) => [
+          styles.optionRow,
+          { backgroundColor: pressed ? theme.buttonBgPressed : theme.buttonBg },
+        ]}
         onPress={() => router.push('/settingsComponents/NotificationsOption')}
       >
-        <Ionicons name="notifications" size={24} color={brown} style={styles.icon} />
-        <Text style={[styles.optionText, { color: brown }]}>Notifications</Text>
-        <Ionicons name="chevron-forward" size={20} color={brown} />
+        <Ionicons name="notifications" size={24} color={iconColor} style={styles.icon} />
+        <Text style={[styles.optionText, { color: iconColor }]}>Notifications</Text>
+        <Ionicons name="chevron-forward" size={20} color={iconColor} />
       </Pressable>
 
       {/* Dark Mode Toggle */}
-      <View style={styles.optionRow}>
-        <Ionicons name="moon" size={24} color={brown} style={styles.icon} />
-        <Text style={[styles.optionText, { color: brown }]}>Dark Mode</Text>
+      <View style={[styles.optionRow, { backgroundColor: theme.buttonBg }]}>
+        <Ionicons name="moon" size={24} color={iconColor} style={styles.icon} />
+        <Text style={[styles.optionText, { color: iconColor }]}>Dark Mode</Text>
         <Switch
-          value={isDarkMode}
-          onValueChange={toggleDarkMode}
+          value={isDark}
+          onValueChange={toggle}
           thumbColor="#FFF"
-          trackColor={{ false: '#ccc', true: brown }}
+          trackColor={{ false: '#ccc', true: iconColor }}
         />
       </View>
 
       {/* About */}
       <Pressable
-        style={styles.optionRow}
+        style={({ pressed }) => [
+          styles.optionRow,
+          { backgroundColor: pressed ? theme.buttonBgPressed : theme.buttonBg },
+        ]}
         onPress={() => router.push('/settingsComponents/AboutOption')}
       >
-        <Ionicons name="information-circle" size={24} color={brown} style={styles.icon} />
-        <Text style={[styles.optionText, { color: brown }]}>About</Text>
-        <Ionicons name="chevron-forward" size={20} color={brown} />
+        <Ionicons
+          name="information-circle"
+          size={24}
+          color={iconColor}
+          style={styles.icon}
+        />
+        <Text style={[styles.optionText, { color: iconColor }]}>About</Text>
+        <Ionicons name="chevron-forward" size={20} color={iconColor} />
       </Pressable>
 
-      {/* Logout Button */}
+      {/* Logout */}
       <Pressable
         style={({ pressed }) => [
           styles.optionRow,
-          { backgroundColor: pressed ? '#FDE68A' : '#FEF3C7' }
+          { backgroundColor: pressed ? theme.buttonBgPressed : theme.buttonBg },
         ]}
         onPress={handleLogout}
       >
-        <Ionicons name="log-out" size={24} color={brown} style={styles.icon} />
-        <Text style={[styles.optionText, { color: brown }]}>Logout</Text>
+        <Ionicons name="log-out" size={24} color={iconColor} style={styles.icon} />
+        <Text style={[styles.optionText, { color: iconColor }]}>Logout</Text>
       </Pressable>
     </ScrollView>
   );
@@ -93,7 +107,6 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 8,
-    backgroundColor: '#FEF3C7',
     marginBottom: 8,
   },
   icon: {

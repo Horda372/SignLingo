@@ -1,11 +1,10 @@
+// TabLayout.tsx
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
 import { Pressable } from 'react-native';
 
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { useCustomTheme } from '@/utils/utils';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -15,29 +14,37 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const { colors } = useCustomTheme();
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: useClientOnlyValue(false, true),
+        // TabBar styling
+        tabBarActiveTintColor: colors.auth.switchLink,
+        tabBarInactiveTintColor: colors.auth.placeholder,
+        tabBarStyle: { backgroundColor: colors.background },
       }}
     >
-      {/* Browse Lessons (Lesson List) */}
       <Tabs.Screen
         name="browse"
         options={{
-          title: 'Browse Lessons',
+          title: 'Browse',                // tab label
+          headerShown: true,              // show header
+          headerTitle: 'Browse Lessons',  // header title
+          headerStyle: { backgroundColor: colors.background },
+          headerTintColor: colors.text,
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
 
-      {/* Community Feed ("Community" tab) */}
       <Tabs.Screen
         name="community"
         options={{
           title: 'Community',
+          headerShown: true,
+          headerTitle: 'Community Feed',
+          headerStyle: { backgroundColor: colors.background },
+          headerTintColor: colors.text,
           tabBarIcon: ({ color }) => <TabBarIcon name="comments" color={color} />,
         }}
       />
@@ -45,16 +52,23 @@ export default function TabLayout() {
       <Tabs.Screen
         name="videoPractice"
         options={{
-          title: 'videoPractice',
+          title: 'Practice',
+          headerShown: true,
+          headerTitle: 'Video Practice',
+          headerStyle: { backgroundColor: colors.background },
+          headerTintColor: colors.textSecondary,
           tabBarIcon: ({ color }) => <TabBarIcon name="trophy" color={color} />,
         }}
       />
 
-      {/* Settings Pane */}
       <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
+          headerShown: true,
+          headerTitle: 'Settings',
+          headerStyle: { backgroundColor: colors.background },
+          headerTintColor: colors.textSecondary,
           tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color} />,
           headerRight: () => (
             <Link href="/settings" asChild>
@@ -63,7 +77,7 @@ export default function TabLayout() {
                   <FontAwesome
                     name="cog"
                     size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
+                    color={colors.auth.switchLink}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                   />
                 )}

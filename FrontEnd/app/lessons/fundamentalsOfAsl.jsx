@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { Video } from 'expo-av'; // assumes you're using Expo
 import { Ionicons } from '@expo/vector-icons';
 import Colors from '@/constants/Colors';
+import { WebView } from 'react-native-webview';
 
 // Quiz component separated
 function DeafCultureQuiz({ quizzes, onFinish }) {
@@ -123,14 +124,11 @@ export default function DeafCultureLesson({ onComplete, onBack }) {
 
       {/* Video Section */}
       <View style={styles.videoWrapper}>
-        <Video
-          source={{ uri: 'https://www.example.com/video.mp4' }}
-          rate={1.0}
-          volume={1.0}
-          resizeMode="cover"
-          useNativeControls
-          style={styles.video}
-        />
+        <WebView
+  style={{ width: '100%', height: 200 }}
+  javaScriptEnabled
+  source={{ uri: 'https://www.youtube.com/embed/eeAq4gkOEUY' }}
+/>
       </View>
 
       {/* Description */}

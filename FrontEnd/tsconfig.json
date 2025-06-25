@@ -15,5 +15,5 @@
     "expo-env.d.ts",
     "app/(tabs)/community.jsx",
     "nativewind-env.d.ts"
-  ]
+, "utils/utils.js", "app/(tabs)/videoPractice.jsx"  ]
 }
